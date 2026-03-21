@@ -1,0 +1,36 @@
+name: "Credit Card Interest Calculator"
+slug: "credit-card"
+repo_name: "simplekit-credit-card"
+subdomain: "credit-card"
+
+seo:
+  page_title: "Credit Card Interest Calculator | Estimate Payoff Time, Interest, and Total Cost"
+  meta_description: "Estimate how long it will take to pay off your credit card, how much interest you will pay, and how extra payments can speed things up."
+  h1: "Credit Card Interest Calculator"
+
+calculator:
+  description: "Estimate how long it could take to pay off a credit card based on your balance, APR, and monthly payments. See your payoff timeline, total interest, total amount paid, and how even small extra payments can reduce the overall cost."
+  formula_notes: "Convert the annual percentage rate to a monthly interest rate by dividing APR by 12 and 100. For each month, calculate interest based on the remaining balance, add that interest to the balance, then apply the entered monthly payment plus any extra monthly payment. Continue the amortization month by month until the balance reaches zero. If the total payment is not enough to cover monthly interest, flag the result as a non-payoff scenario. Report payoff time in months and years, total interest paid, total amount paid, the effect of extra payments compared with the base payment, and a payoff pace status such as slow, moderate, or aggressive. Results are planning estimates and may differ from actual card issuer calculations because of compounding methods, fees, statement timing, or changing balances."
+
+inputs:
+  - id: "current_balance, annual_interest_rate, monthly_payment, extra_monthly_payment"
+    label: "Current Balance, Annual Interest Rate (APR), Monthly Payment, Extra Monthly Payment"
+    type: "currency, percent, currency, currency"
+
+outputs:
+  - id: "payoff_time, total_interest_paid, total_amount_paid, monthly_payment_effect, payoff_status"
+    label: "Payoff Time, Total Interest Paid, Total Amount Paid, Monthly Payment Effect, Payoff Status"
+
+content:
+  intro: "A credit card interest calculator helps you estimate how long it may take to pay off a balance and how much interest you could pay along the way. It takes your current balance, annual percentage rate, and monthly payment, then projects a month-by-month payoff path. This makes it easier to see the real cost of carrying credit card debt instead of only looking at the current statement.\n\nSmall payment changes can make a meaningful difference. Adding even a modest extra amount each month may shorten your payoff timeline and reduce total interest. This tool is designed to give you a clear, practical estimate so you can compare payment options, understand whether your current pace is slow or aggressive, and make a more confident payoff plan."
+  result_explanation: "Your results show how long payoff could take at your current payment pace, how much interest may build up before the balance reaches zero, and the total amount you may pay overall. If the timeline feels longer than expected, that is often a sign that interest is consuming a large part of each payment, especially when the payment is close to the minimum.\n\nTry testing a higher monthly payment or adding a small extra amount to see how the payoff date and total interest change. Even a small increase can save money over time. These results are planning estimates, not lender statements, so your actual numbers may differ based on fees, new purchases, changing rates, and the way your card issuer calculates interest."
+
+faq:
+  - question: "How does credit card interest work, why do minimum payments take so long, does paying extra reduce interest, what happens if my payment is too low, is this the same as a debt payoff calculator, and how accurate is this estimate?"
+    answer: "Credit card interest is usually calculated from your annual percentage rate, or APR, and applied to your balance over time, often on a daily or monthly basis depending on the issuer. When your payment is small, a large share of it can go toward interest instead of the balance, which is why minimum payments often stretch repayment over many years. Paying extra each month usually lowers your balance faster, which reduces future interest charges and shortens payoff time. If your payment is too low to cover the interest being added, the balance may not go down meaningfully and in some cases can keep growing, so this calculator should flag that situation as a non-payoff result. This tool is closely related to a debt payoff calculator, but it is focused on a single credit card balance and the effect of payment size on interest and payoff timing. The estimate is useful for planning, but exact results can differ from your lender because of statement timing, compounding method, fees, promotional rates, or new charges. Common questions this tool helps answer include: how credit card interest is calculated, why minimum payments take so long, whether paying extra saves interest, what happens when a payment is too low, whether this is the same as a debt payoff calculator, how long it will take to pay off a credit card, and how accurate the estimate is compared with a real statement."
+
+related_tools:
+  - "Debt Payoff Calculator"
+  - "Budget Planner"
+
+disclaimer: "This calculator provides general payoff estimates for educational and planning purposes only. It is not financial advice, a lender statement, or a guarantee of future results. Actual payoff timing and interest charges can vary based on your card issuer's calculation method, fees, promotional rates, changes to your APR, and any new purchases or missed payments."
