@@ -1,0 +1,32 @@
+/* Balance/payment inputs retain their debt-free summary, target-payment guidance and comparison modes. */
+.sk-v2[data-v2-calculator="credit-card-interest-calculator"] {
+  --cc-brand:var(--v2-blue);
+  --cc-brand-2:var(--v2-teal);
+  --cc-brand-deep:var(--v2-navy);
+  --cc-brand-soft:var(--v2-teal);
+  --cc-caution:var(--v2-warning);
+  --cc-danger:var(--v2-error);
+  --cc-ink:var(--v2-navy);
+  --cc-line:var(--v2-border);
+  --cc-muted:var(--v2-slate);
+  --cc-positive:var(--v2-success);
+  --cc-radius:var(--v2-radius-card);
+  --cc-shadow:var(--v2-shadow-soft);
+  --cc-surface:var(--v2-surface);
+  --cc-surface-soft:var(--v2-surface);
+}
+.sk-v2[data-v2-calculator="credit-card-interest-calculator"] .v2c-main { row-gap:1.25rem; }
+.sk-v2[data-v2-calculator="credit-card-interest-calculator"] .calculator-layout { gap:1.25rem; }
+.sk-v2[data-v2-calculator="credit-card-interest-calculator"] .result-grid,.sk-v2[data-v2-calculator="credit-card-interest-calculator"] .comparison-grid { gap:.75rem; }
+.sk-v2[data-v2-calculator="credit-card-interest-calculator"] .summary-shell { background:var(--v2-blue-soft); border-color:var(--v2-border); border-radius:var(--v2-radius-card); }
+@media(min-width:64rem) {
+ .sk-v2[data-v2-calculator="credit-card-interest-calculator"] .calculator-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr); align-items:start; }
+}
+@media(max-width:63.99rem) {
+ .sk-v2[data-v2-calculator="credit-card-interest-calculator"] .calculator-layout { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="credit-card-interest-calculator"] .summary-card-sticky { position:static; }
+}
+@media(max-width:47.99rem) {
+ .sk-v2[data-v2-calculator="credit-card-interest-calculator"] :where(.form-grid,.field-grid,.advanced-grid,.input-grid,.salary-grid,.calculator-grid,.group-grid,.hero-grid,.settings-inline-grid) { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="credit-card-interest-calculator"] :where(.form-actions,.toolbar-actions,.action-group,.wizard-actions,.backup-actions) { flex-wrap:wrap; }
+}
